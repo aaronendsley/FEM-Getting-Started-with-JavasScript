@@ -19,13 +19,13 @@ class Bookshelf {
   }
 }
 
-function loadBooks(Bookshelf) {
+function loadBooks(theBookshelf) {
   // TODO: call fakeAjax( .. );
   fakeAjax(BOOK_API, function bookCall(booknames) {
     for (let book of booknames) {
-      Bookshelf.addFavoriteBook(book);
+      theBookshelf.addFavoriteBook(book);
     }
-    Bookshelf.printFavoriteBooks();
+    theBookshelf.printFavoriteBooks();
   });
 }
 
